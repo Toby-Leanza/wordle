@@ -1,7 +1,7 @@
-#ifndef ED_H
-#define ED_H
+#ifndef ED1_H
+#define ED1_H
 
 // Función para cargar la base de datos de palabras desde un archivo
-char** cargar_base_datos(const char* nombre_archivo, int* cantidad_palabras);
+void cargarBaseDeDatos(char palabras[][6], int frecuencias[], int* numPalabras);
 
 #endif
