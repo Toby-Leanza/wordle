@@ -1,3 +1,7 @@
 # Wordle
 Este código funciona mediante bases de datos donde tienen todas las posibles palabras con su respectiva frecuencia. Se tienen 6 intentos de palabras donde el tamaño de cada una tiene que ser de 5 letras, ni una más, ni una menos.
 Por cada intento cada letra aparecerá con 1 de 3 colores, verde, amarillo y gris, significando el color verde que la letra se encuentra en esa posición, el amarillo que la letra se encuentra en la palabra pero está en una posición diferente a la ingresada, mientras que el color gris significa que la letra puesta directamente no se encuetra en la palabra.
+El código consta de 4 partes importantes de código, el apartado del jugador.c, el apartado jugable.c, el mainEd.c y el mainEd2.c.
+El primer apartado se encarga de buscar la palabra con mayor frecuencia y filtrar las palabras corroborando si las letras de la palabra ingresada por un jugador están en la posición correcta o incorrecta y ponerle el color correspondiente y eliminar la palabra que no es la correcta para que en caso de volver a ponerse no perder un intento.
+El segundo apartado se encarga de solicitarle al jugador una palabra y quitarle un intento si no se adivina en ese intento, imprimiendo la palabra con el color correspondiente en cada letra.
+Mientras que la funcionalidad de los últimos puntos es la de cargar la base de datos donde se encuetran las palabras y elegir la palabra secreta a adivinar, y la de mostrar las letras que se fueron usando con su color respectivo (gris, amarillo o verde).
