@@ -1,7 +1,9 @@
 # Wordle
-Este código funciona mediante bases de datos donde tienen todas las posibles palabras con su respectiva frecuencia. Se tienen 6 intentos de palabras donde el tamaño de cada una tiene que ser de 5 letras, ni una más, ni una menos.
-Por cada intento cada letra aparecerá con 1 de 3 colores, verde, amarillo y gris, significando el color verde que la letra se encuentra en esa posición, el amarillo que la letra se encuentra en la palabra pero está en una posición diferente a la ingresada, mientras que el color gris significa que la letra puesta directamente no se encuetra en la palabra.
-El código consta de 4 partes importantes de código, el apartado del jugador.c, el apartado jugable.c, el mainEd.c y el mainEd2.c.
-El primer apartado se encarga de buscar la palabra con mayor frecuencia y filtrar las palabras corroborando si las letras de la palabra ingresada por un jugador están en la posición correcta o incorrecta y ponerle el color correspondiente y eliminar la palabra que no es la correcta para que en caso de volver a ponerse no perder un intento.
-El segundo apartado se encarga de solicitarle al jugador una palabra y quitarle un intento si no se adivina en ese intento, imprimiendo la palabra con el color correspondiente en cada letra.
-Mientras que la funcionalidad de los últimos puntos es la de cargar la base de datos donde se encuetran las palabras y elegir la palabra secreta a adivinar, y la de mostrar las letras que se fueron usando con su color respectivo (gris, amarillo o verde).
+𝔈𝔰𝔱𝔢 𝔠ó𝔡𝔦𝔤𝔬 𝔣𝔲𝔫𝔠𝔦𝔬𝔫𝔞 𝔪𝔢𝔡𝔦𝔞𝔫𝔱𝔢 𝔟𝔞𝔰𝔢𝔰 𝔡𝔢 𝔡𝔞𝔱𝔬𝔰 𝔡𝔬𝔫𝔡𝔢 𝔱𝔦𝔢𝔫𝔢𝔫 𝔱𝔬𝔡𝔞𝔰 𝔩𝔞𝔰 𝔭𝔬𝔰𝔦𝔟𝔩𝔢𝔰 𝔭𝔞𝔩𝔞𝔟𝔯𝔞𝔰 𝔠𝔬𝔫 𝔰𝔲 𝔯𝔢𝔰𝔭𝔢𝔠𝔱𝔦𝔳𝔞 𝔣𝔯𝔢𝔠𝔲𝔢𝔫𝔠𝔦𝔞. 𝔖𝔢 𝔱𝔦𝔢𝔫𝔢𝔫 6 𝔦𝔫𝔱𝔢𝔫𝔱𝔬𝔰 𝔡𝔢 𝔭𝔞𝔩𝔞𝔟𝔯𝔞𝔰 𝔡𝔬𝔫𝔡𝔢 𝔢𝔩 𝔱𝔞𝔪𝔞ñ𝔬 𝔡𝔢 𝔠𝔞𝔡𝔞 𝔲𝔫𝔞 𝔱𝔦𝔢𝔫𝔢 𝔮𝔲𝔢 𝔰𝔢𝔯 𝔡𝔢 5 𝔩𝔢𝔱𝔯𝔞𝔰, 𝔫𝔦 𝔲𝔫𝔞 𝔪á𝔰, 𝔫𝔦 𝔲𝔫𝔞 𝔪𝔢𝔫𝔬𝔰.
+𝔓𝔬𝔯 𝔠𝔞𝔡𝔞 𝔦𝔫𝔱𝔢𝔫𝔱𝔬 𝔠𝔞𝔡𝔞 𝔩𝔢𝔱𝔯𝔞 𝔞𝔭𝔞𝔯𝔢𝔠𝔢𝔯á 𝔠𝔬𝔫 1 𝔡𝔢 3 𝔠𝔬𝔩𝔬𝔯𝔢𝔰, 𝔳𝔢𝔯𝔡𝔢, 𝔞𝔪𝔞𝔯𝔦𝔩𝔩𝔬 𝔶 𝔤𝔯𝔦𝔰, 𝔰𝔦𝔤𝔫𝔦𝔣𝔦𝔠𝔞𝔫𝔡𝔬 𝔢𝔩 𝔠𝔬𝔩𝔬𝔯 𝔳𝔢𝔯𝔡𝔢 𝔮𝔲𝔢 𝔩𝔞 𝔩𝔢𝔱𝔯𝔞 𝔰𝔢 𝔢𝔫𝔠𝔲𝔢𝔫𝔱𝔯𝔞 𝔢𝔫 𝔢𝔰𝔞 𝔭𝔬𝔰𝔦𝔠𝔦ó𝔫, 𝔢𝔩 𝔞𝔪𝔞𝔯𝔦𝔩𝔩𝔬 𝔮𝔲𝔢 𝔩𝔞 𝔩𝔢𝔱𝔯𝔞 𝔰𝔢 𝔢𝔫𝔠𝔲𝔢𝔫𝔱𝔯𝔞 𝔢𝔫 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔭𝔢𝔯𝔬 𝔢𝔰𝔱á 𝔢𝔫 𝔲𝔫𝔞 𝔭𝔬𝔰𝔦𝔠𝔦ó𝔫 𝔡𝔦𝔣𝔢𝔯𝔢𝔫𝔱𝔢 𝔞 𝔩𝔞 𝔦𝔫𝔤𝔯𝔢𝔰𝔞𝔡𝔞, 𝔪𝔦𝔢𝔫𝔱𝔯𝔞𝔰 𝔮𝔲𝔢 𝔢𝔩 𝔠𝔬𝔩𝔬𝔯 𝔤𝔯𝔦𝔰 𝔰𝔦𝔤𝔫𝔦𝔣𝔦𝔠𝔞 𝔮𝔲𝔢 𝔩𝔞 𝔩𝔢𝔱𝔯𝔞 𝔭𝔲𝔢𝔰𝔱𝔞 𝔡𝔦𝔯𝔢𝔠𝔱𝔞𝔪𝔢𝔫𝔱𝔢 𝔫𝔬 𝔰𝔢 𝔢𝔫𝔠𝔲𝔢𝔱𝔯𝔞 𝔢𝔫 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞.
+𝔈𝔩 𝔠ó𝔡𝔦𝔤𝔬 𝔠𝔬𝔫𝔰𝔱𝔞 𝔡𝔢 4 𝔭𝔞𝔯𝔱𝔢𝔰 𝔦𝔪𝔭𝔬𝔯𝔱𝔞𝔫𝔱𝔢𝔰 𝔡𝔢 𝔠ó𝔡𝔦𝔤𝔬, 𝔢𝔩 𝔞𝔭𝔞𝔯𝔱𝔞𝔡𝔬 𝔡𝔢𝔩 𝔧𝔲𝔤𝔞𝔡𝔬𝔯.𝔠, 𝔢𝔩 𝔞𝔭𝔞𝔯𝔱𝔞𝔡𝔬 𝔧𝔲𝔤𝔞𝔟𝔩𝔢.𝔠, 𝔢𝔩 𝔪𝔞𝔦𝔫𝔈𝔡.𝔠 𝔶 𝔢𝔩 𝔪𝔞𝔦𝔫𝔈𝔡2.𝔠.
+𝔈𝔩 𝔭𝔯𝔦𝔪𝔢𝔯 𝔞𝔭𝔞𝔯𝔱𝔞𝔡𝔬 𝔰𝔢 𝔢𝔫𝔠𝔞𝔯𝔤𝔞 𝔡𝔢 𝔟𝔲𝔰𝔠𝔞𝔯 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔠𝔬𝔫 𝔪𝔞𝔶𝔬𝔯 𝔣𝔯𝔢𝔠𝔲𝔢𝔫𝔠𝔦𝔞 𝔶 𝔣𝔦𝔩𝔱𝔯𝔞𝔯 𝔩𝔞𝔰 𝔭𝔞𝔩𝔞𝔟𝔯𝔞𝔰 𝔠𝔬𝔯𝔯𝔬𝔟𝔬𝔯𝔞𝔫𝔡𝔬 𝔰𝔦 𝔩𝔞𝔰 𝔩𝔢𝔱𝔯𝔞𝔰 𝔡𝔢 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔦𝔫𝔤𝔯𝔢𝔰𝔞𝔡𝔞 𝔭𝔬𝔯 𝔲𝔫 𝔧𝔲𝔤𝔞𝔡𝔬𝔯 𝔢𝔰𝔱á𝔫 𝔢𝔫 𝔩𝔞 𝔭𝔬𝔰𝔦𝔠𝔦ó𝔫 𝔠𝔬𝔯𝔯𝔢𝔠𝔱𝔞 𝔬 𝔦𝔫𝔠𝔬𝔯𝔯𝔢𝔠𝔱𝔞 𝔶 𝔭𝔬𝔫𝔢𝔯𝔩𝔢 𝔢𝔩 𝔠𝔬𝔩𝔬𝔯 𝔠𝔬𝔯𝔯𝔢𝔰𝔭𝔬𝔫𝔡𝔦𝔢𝔫𝔱𝔢 𝔶 𝔢𝔩𝔦𝔪𝔦𝔫𝔞𝔯 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔮𝔲𝔢 𝔫𝔬 𝔢𝔰 𝔩𝔞 𝔠𝔬𝔯𝔯𝔢𝔠𝔱𝔞 𝔭𝔞𝔯𝔞 𝔮𝔲𝔢 𝔢𝔫 𝔠𝔞𝔰𝔬 𝔡𝔢 𝔳𝔬𝔩𝔳𝔢𝔯 𝔞 𝔭𝔬𝔫𝔢𝔯𝔰𝔢 𝔫𝔬 𝔭𝔢𝔯𝔡𝔢𝔯 𝔲𝔫 𝔦𝔫𝔱𝔢𝔫𝔱𝔬.
+𝔈𝔩 𝔰𝔢𝔤𝔲𝔫𝔡𝔬 𝔞𝔭𝔞𝔯𝔱𝔞𝔡𝔬 𝔰𝔢 𝔢𝔫𝔠𝔞𝔯𝔤𝔞 𝔡𝔢 𝔰𝔬𝔩𝔦𝔠𝔦𝔱𝔞𝔯𝔩𝔢 𝔞𝔩 𝔧𝔲𝔤𝔞𝔡𝔬𝔯 𝔲𝔫𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔶 𝔮𝔲𝔦𝔱𝔞𝔯𝔩𝔢 𝔲𝔫 𝔦𝔫𝔱𝔢𝔫𝔱𝔬 𝔰𝔦 𝔫𝔬 𝔰𝔢 𝔞𝔡𝔦𝔳𝔦𝔫𝔞 𝔢𝔫 𝔢𝔰𝔢 𝔦𝔫𝔱𝔢𝔫𝔱𝔬, 𝔦𝔪𝔭𝔯𝔦𝔪𝔦𝔢𝔫𝔡𝔬 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔠𝔬𝔫 𝔢𝔩 𝔠𝔬𝔩𝔬𝔯 𝔠𝔬𝔯𝔯𝔢𝔰𝔭𝔬𝔫𝔡𝔦𝔢𝔫𝔱𝔢 𝔢𝔫 𝔠𝔞𝔡𝔞 𝔩𝔢𝔱𝔯𝔞.
+𝔐𝔦𝔢𝔫𝔱𝔯𝔞𝔰 𝔮𝔲𝔢 𝔩𝔞 𝔣𝔲𝔫𝔠𝔦𝔬𝔫𝔞𝔩𝔦𝔡𝔞𝔡 𝔡𝔢 𝔩𝔬𝔰 ú𝔩𝔱𝔦𝔪𝔬𝔰 𝔭𝔲𝔫𝔱𝔬𝔰 𝔢𝔰 𝔩𝔞 𝔡𝔢 𝔠𝔞𝔯𝔤𝔞𝔯 𝔩𝔞 𝔟𝔞𝔰𝔢 𝔡𝔢 𝔡𝔞𝔱𝔬𝔰 𝔡𝔬𝔫𝔡𝔢 𝔰𝔢 𝔢𝔫𝔠𝔲𝔢𝔱𝔯𝔞𝔫 𝔩𝔞𝔰 𝔭𝔞𝔩𝔞𝔟𝔯𝔞𝔰 𝔶 𝔢𝔩𝔢𝔤𝔦𝔯 𝔩𝔞 𝔭𝔞𝔩𝔞𝔟𝔯𝔞 𝔰𝔢𝔠𝔯𝔢𝔱𝔞 𝔞 𝔞𝔡𝔦𝔳𝔦𝔫𝔞𝔯, 𝔶 𝔩𝔞 𝔡𝔢 𝔪𝔬𝔰𝔱𝔯𝔞𝔯 𝔩𝔞𝔰 𝔩𝔢𝔱𝔯𝔞𝔰 𝔮𝔲𝔢 𝔰𝔢 𝔣𝔲𝔢𝔯𝔬𝔫 𝔲𝔰𝔞𝔫𝔡𝔬 𝔠𝔬𝔫 𝔰𝔲 𝔠𝔬𝔩𝔬𝔯 𝔯𝔢𝔰𝔭𝔢𝔠𝔱𝔦𝔳𝔬 (𝔤𝔯𝔦𝔰, 𝔞𝔪𝔞𝔯𝔦𝔩𝔩𝔬 𝔬 𝔳𝔢𝔯𝔡𝔢).
+
+𝔓𝔞𝔯𝔞 𝔢𝔧𝔢𝔠𝔲𝔱𝔞𝔯 𝔢𝔩 𝔠ó𝔡𝔦𝔤𝔬
