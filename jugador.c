@@ -24,17 +24,14 @@ void filtrarPalabras(char palabras[][6], int frecuencias[], int* numPalabras, ch
             if (resultado[j] == 'G') { // Letra en posición correcta (verde)
                 if (palabras[i][j] != intento[j]) {
                     eliminar = 1;
-                    break;
                 }
             } else if (resultado[j] == 'Y') { // Letra en palabra, pero en posición incorrecta (amarillo)
                 if (palabras[i][j] == intento[j] || !strchr(palabras[i], intento[j])) {
                     eliminar = 1;
-                    break;
                 }
             } else { // Letra no está en la palabra (gris)
                 if (strchr(palabras[i], intento[j])) {
                     eliminar = 1;
-                    break;
                 }
             }
         }

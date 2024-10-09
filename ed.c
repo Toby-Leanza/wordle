@@ -2,7 +2,7 @@
 #include "ed.h"
 
 void cargarBaseDeDatos(char palabras[][6], int frecuencias[], int* numPalabras) {
-    FILE *archivo = fopen("palabras.txt", "r");
+    FILE *archivo = fopen("Base_Datos.txt", "r");
 
     if (!archivo) {
         printf("No se pudo abrir el archivo de palabras.\n");

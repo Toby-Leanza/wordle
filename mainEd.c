@@ -4,8 +4,8 @@
 #include "ed.h"
 
 int main() {
-    char palabras[100][6];
-    int frecuencias[100];
+    char palabras[][6];
+    int frecuencias[];
     int numPalabras;
 
     cargarBaseDeDatos(palabras, frecuencias, &numPalabras);

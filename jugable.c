@@ -4,7 +4,7 @@
 
 
 void jugarWordle(char* palabraSecreta) {
-    char intento[6];
+    char *intento = (char*)malloc(6*sizeof(char));
     int intentos = 6;
 
     for (int i = 0; i < intentos; i++) {
@@ -14,7 +14,7 @@ void jugarWordle(char* palabraSecreta) {
         // Verifica si el intento es la palabra secreta
         if (strcmp(intento, palabraSecreta) == 0) {
             printf("¡Has adivinado la palabra!\n");
-            return;
+            liberar_memoria(intento);
         }
 
         // Muestra las letras con colores según el resultado
@@ -34,4 +34,11 @@ void jugarWordle(char* palabraSecreta) {
     }
 
     printf("Lo siento, no has adivinado la palabra. La palabra secreta era: %s\n", palabraSecreta);
+}
+
+void liberar_memoria(char* palabra, int n){
+    for(int i = 0; i<n; i++){
+        free(palabra[i]);
+    }
+    free(palabra);
 }
