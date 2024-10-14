@@ -10,10 +10,12 @@ void cargarBaseDeDatos(char palabras[][6], int frecuencias[], int* numPalabras) 
     }
 
     int i = 0;
-    while (fscanf(archivo, "%s %d", palabras[i], &frecuencias[i]) != EOF) {
+    // Asegúrate de que la cadena puede contener 5 letras más el terminador nulo.
+    while (fscanf(archivo, "%5[^,],%d\n", palabras[i], &frecuencias[i]) != EOF) {
         i++;
     }
     *numPalabras = i;
     
     fclose(archivo);
 }
+

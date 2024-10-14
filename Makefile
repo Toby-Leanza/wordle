@@ -1,9 +1,9 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 
 # Define the source files
-SRCS_ED = ed.c jugador.c jugable.c
-SRCS_ED2 = ed2.c jugador.c jugable.c
+SRCS_ED = ed.c jugador.c jugable.c ed2.c
+SRCS_ED2 = ed2.c jugador.c jugable.c ed.c
 
 # Define the object files
 OBJS_ED = $(SRCS_ED:.c=.o)

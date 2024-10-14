@@ -16,6 +16,7 @@ char* elegirPalabra(char palabras[][6], int frecuencias[], int numPalabras) {
     return palabras[indicePalabra];
 }
 
+
 void filtrarPalabras(char palabras[][6], int frecuencias[], int* numPalabras, char* intento, char resultado[5]) {
     for (int i = 0; i < *numPalabras; i++) {
         int eliminar = 0;
@@ -36,7 +37,7 @@ void filtrarPalabras(char palabras[][6], int frecuencias[], int* numPalabras, ch
             }
         }
 
-        // Eliminar palabra que no cumple
+        // Eliminar palabra de la base de datos auxiliar en memoria
         if (eliminar) {
             for (int k = i; k < *numPalabras - 1; k++) {
                 strcpy(palabras[k], palabras[k + 1]);
