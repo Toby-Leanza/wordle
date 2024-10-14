@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "jugable.h"
 
 
@@ -36,9 +37,6 @@ void jugarWordle(char* palabraSecreta) {
     printf("Lo siento, no has adivinado la palabra. La palabra secreta era: %s\n", palabraSecreta);
 }
 
-void liberar_memoria(char* palabra, int n){
-    for(int i = 0; i<n; i++){
-        free(palabra[i]);
-    }
+void liberar_memoria(char* palabra){
     free(palabra);
 }

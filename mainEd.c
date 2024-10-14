@@ -3,11 +3,11 @@
 #include "jugador.h"
 #include "ed.h"
 
-#define 
+#define WORD_SIZE 5
 
 int main() {
-    char palabras[ ][6];
-    int frecuencias[ ];
+    char palabras[WORD_SIZE][6];
+    int frecuencias[WORD_SIZE];
     int numPalabras;
 
     cargarBaseDeDatos(palabras, frecuencias, &numPalabras);
