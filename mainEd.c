@@ -7,22 +7,26 @@
 
 #define WORD_SIZE 4985
 
-int main() {
+int main(int argc, char* argv[]) {
     char palabras[WORD_SIZE][6];
     int frecuencias[WORD_SIZE];
     int numPalabras;
 
     cargarBaseDeDatos(palabras, frecuencias, &numPalabras);
 
-    // Seleccionar una palabra secreta
-    char* palabraSecreta = elegirPalabra(palabras, frecuencias, numPalabras);
+    if(argc != 2){
+        printf("Uso: ./mainEd [palabraSecreta]\n");
+        return 1;
+    }
 
-    // Comenzar el juego
+    char* palabraSecreta = argv[1];
+
+    if (strlen(palabraSecreta) != 5){
+        printf("Palabra invalida, intente de nuevo\n");
+        return 1;
+    }
+
     jugarWordle(palabraSecreta);
-
-    // Liberar la palabra secreta
-    liberar_memoria(palabraSecreta);
 
     return 0;
 }
-
