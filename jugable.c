@@ -53,4 +53,3 @@ void jugarWordle(char* palabraSecreta) {
 
     free(intento);
 }
-
