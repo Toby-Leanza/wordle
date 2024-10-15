@@ -2,19 +2,47 @@
 #include <string.h>
 #include "jugador.h"
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
 char* elegirPalabra(char palabras[][6], int frecuencias[], int numPalabras) {
     int maxFrecuencia = -1;
-    int indicePalabra = -1;
+    int count = 0;
 
-    // Buscar la palabra con la máxima frecuencia
+    // Primero, encontrar la máxima frecuencia
     for (int i = 0; i < numPalabras; i++) {
         if (frecuencias[i] > maxFrecuencia) {
             maxFrecuencia = frecuencias[i];
-            indicePalabra = i;
+            count = 1; // Resetear contador
+        } else if (frecuencias[i] == maxFrecuencia) {
+            count++; // Contar palabras con la misma frecuencia
         }
     }
-    return palabras[indicePalabra];
+
+    // Crear un arreglo temporal para las palabras con la máxima frecuencia
+    char (*palabrasMax)[6] = malloc(count * sizeof(*palabrasMax));
+    int index = 0;
+
+    // Almacenar palabras con la frecuencia máxima
+    for (int i = 0; i < numPalabras; i++) {
+        if (frecuencias[i] == maxFrecuencia) {
+            strcpy(palabrasMax[index++], palabras[i]);
+        }
+    }
+
+    // Seleccionar aleatoriamente una palabra de las palabras con máxima frecuencia
+    srand(time(NULL)); // Inicializa la semilla para la generación aleatoria
+    int randomIndex = rand() % count;
+
+    // Liberar memoria y devolver la palabra elegida
+    char* palabraElegida = strdup(palabrasMax[randomIndex]);
+    free(palabrasMax);
+
+    return palabraElegida;
 }
+
 
 
 void filtrarPalabras(char palabras[][6], int frecuencias[], int* numPalabras, char* intento, char resultado[5]) {

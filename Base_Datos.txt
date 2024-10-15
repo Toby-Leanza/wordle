@@ -5,7 +5,7 @@ abada,3
 abadi,4
 abajo,1
 abano,8
-abasi,9
+abasi,7
 abate,3
 abati,2
 abece,4

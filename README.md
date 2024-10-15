@@ -1,16 +1,17 @@
 # Wordle
 ## ¿Cómo funciona?
-𝘌𝘴𝘵𝘦 𝘤ó𝘥𝘪𝘨𝘰 𝘧𝘶𝘯𝘤𝘪𝘰𝘯𝘢 𝘮𝘦𝘥𝘪𝘢𝘯𝘵𝘦 𝘣𝘢𝘴𝘦𝘴 𝘥𝘦 𝘥𝘢𝘵𝘰𝘴 𝘥𝘰𝘯𝘥𝘦 𝘵𝘪𝘦𝘯𝘦𝘯 𝘵𝘰𝘥𝘢𝘴 𝘭𝘢𝘴 𝘱𝘰𝘴𝘪𝘣𝘭𝘦𝘴 𝘱𝘢𝘭𝘢𝘣𝘳𝘢𝘴 𝘤𝘰𝘯 𝘴𝘶 𝘳𝘦𝘴𝘱𝘦𝘤𝘵𝘪𝘷𝘢 𝘧𝘳𝘦𝘤𝘶𝘦𝘯𝘤𝘪𝘢. 𝘚𝘦 𝘵𝘪𝘦𝘯𝘦𝘯 6 𝘪𝘯𝘵𝘦𝘯𝘵𝘰𝘴 𝘥𝘦 𝘱𝘢𝘭𝘢𝘣𝘳𝘢𝘴 𝘥𝘰𝘯𝘥𝘦 𝘦𝘭 𝘵𝘢𝘮𝘢ñ𝘰 𝘥𝘦 𝘤𝘢𝘥𝘢 𝘶𝘯𝘢 𝘵𝘪𝘦𝘯𝘦 𝘲𝘶𝘦 𝘴𝘦𝘳 𝘥𝘦 5 𝘭𝘦𝘵𝘳𝘢𝘴, 𝘯𝘪 𝘶𝘯𝘢 𝘮á𝘴, 𝘯𝘪 𝘶𝘯𝘢 𝘮𝘦𝘯𝘰𝘴.
+**Esté código funciona mediante bases de datos donde tienen todas las posibles palabras con su respectiva frecuencia. Se tienen 6 intentos de palabras donde el tamaño de cada una tiene que ser de 5 letras, ni una más, ni una menos.**
 
-𝘗𝘰𝘳 𝘤𝘢𝘥𝘢 𝘪𝘯𝘵𝘦𝘯𝘵𝘰 𝘤𝘢𝘥𝘢 𝘭𝘦𝘵𝘳𝘢 𝘢𝘱𝘢𝘳𝘦𝘤𝘦𝘳á 𝘤𝘰𝘯 1 𝘥𝘦 3 𝘤𝘰𝘭𝘰𝘳𝘦𝘴, 𝘷𝘦𝘳𝘥𝘦, 𝘢𝘮𝘢𝘳𝘪𝘭𝘭𝘰 𝘺 𝘨𝘳𝘪𝘴, 𝘴𝘪𝘨𝘯𝘪𝘧𝘪𝘤𝘢𝘯𝘥𝘰 𝘦𝘭 𝘤𝘰𝘭𝘰𝘳 𝘷𝘦𝘳𝘥𝘦 𝘲𝘶𝘦 𝘭𝘢 𝘭𝘦𝘵𝘳𝘢 𝘴𝘦 𝘦𝘯𝘤𝘶𝘦𝘯𝘵𝘳𝘢 𝘦𝘯 𝘦𝘴𝘢 𝘱𝘰𝘴𝘪𝘤𝘪ó𝘯, 𝘦𝘭 𝘢𝘮𝘢𝘳𝘪𝘭𝘭𝘰 𝘲𝘶𝘦 𝘭𝘢 𝘭𝘦𝘵𝘳𝘢 𝘴𝘦 𝘦𝘯𝘤𝘶𝘦𝘯𝘵𝘳𝘢 𝘦𝘯 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘱𝘦𝘳𝘰 𝘦𝘴𝘵á 𝘦𝘯 𝘶𝘯𝘢 𝘱𝘰𝘴𝘪𝘤𝘪ó𝘯 𝘥𝘪𝘧𝘦𝘳𝘦𝘯𝘵𝘦 𝘢 𝘭𝘢 𝘪𝘯𝘨𝘳𝘦𝘴𝘢𝘥𝘢, 𝘮𝘪𝘦𝘯𝘵𝘳𝘢𝘴 𝘲𝘶𝘦 𝘦𝘭 𝘤𝘰𝘭𝘰𝘳 𝘨𝘳𝘪𝘴 𝘴𝘪𝘨𝘯𝘪𝘧𝘪𝘤𝘢 𝘲𝘶𝘦 𝘭𝘢 𝘭𝘦𝘵𝘳𝘢 𝘱𝘶𝘦𝘴𝘵𝘢 𝘥𝘪𝘳𝘦𝘤𝘵𝘢𝘮𝘦𝘯𝘵𝘦 𝘯𝘰 𝘴𝘦 𝘦𝘯𝘤𝘶𝘦𝘯𝘵𝘳𝘢 𝘦𝘯 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢.
+Por cada intento cada letra aparecerá con 1 de 3 colores: verde, amarillo y gris, significando el color verde que la letra se encuentra en esa posición, el amarillo que la letra se encuentra en la palabra pero está en una posición diferente a la ingresada, mientras que el color gris significa que la letra puesta directamente no se encuentra en la palabra.
 
-𝘌𝘭 𝘤ó𝘥𝘪𝘨𝘰 𝘤𝘰𝘯𝘴𝘵𝘢 𝘥𝘦 4 𝘱𝘢𝘳𝘵𝘦𝘴 𝘪𝘮𝘱𝘰𝘳𝘵𝘢𝘯𝘵𝘦𝘴 𝘥𝘦 𝘤ó𝘥𝘪𝘨𝘰, 𝘦𝘭 𝘢𝘱𝘢𝘳𝘵𝘢𝘥𝘰 𝘥𝘦𝘭 𝘫𝘶𝘨𝘢𝘥𝘰𝘳.𝘤, 𝘦𝘭 𝘢𝘱𝘢𝘳𝘵𝘢𝘥𝘰 𝘫𝘶𝘨𝘢𝘣𝘭𝘦.𝘤, 𝘦𝘭 𝘮𝘢𝘪𝘯𝘌𝘋.𝘤 𝘺 𝘦𝘭 𝘮𝘢𝘪𝘯𝘌𝘋2.𝘤.
+El código consta de 4 partes importantes de código, el `apartado jugador.c`, el `apartado jugable.c`, el `mainED.c` y el `mainED2.c`.
 
-𝘌𝘭 𝘱𝘳𝘪𝘮𝘦𝘳 𝘢𝘱𝘢𝘳𝘵𝘢𝘥𝘰 𝘴𝘦 𝘦𝘯𝘤𝘢𝘳𝘨𝘢 𝘥𝘦 𝘣𝘶𝘴𝘤𝘢𝘳 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘤𝘰𝘯 𝘮𝘢𝘺𝘰𝘳 𝘧𝘳𝘦𝘤𝘶𝘦𝘯𝘤𝘪𝘢 𝘺 𝘧𝘪𝘭𝘵𝘳𝘢𝘳 𝘭𝘢𝘴 𝘱𝘢𝘭𝘢𝘣𝘳𝘢𝘴 𝘤𝘰𝘳𝘳𝘰𝘣𝘰𝘳𝘢𝘯𝘥𝘰 𝘴𝘪 𝘭𝘢𝘴 𝘭𝘦𝘵𝘳𝘢𝘴 𝘥𝘦 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘪𝘯𝘨𝘳𝘦𝘴𝘢𝘥𝘢 𝘱𝘰𝘳 𝘶𝘯 𝘫𝘶𝘨𝘢𝘥𝘰𝘳 𝘦𝘴𝘵á𝘯 𝘦𝘯 𝘭𝘢 𝘱𝘰𝘴𝘪𝘤𝘪ó𝘯 𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘢 𝘰 𝘪𝘯𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘢 𝘺 𝘱𝘰𝘯𝘦𝘳𝘭𝘦 𝘦𝘭 𝘤𝘰𝘭𝘰𝘳 𝘤𝘰𝘳𝘳𝘦𝘴𝘱𝘰𝘯𝘥𝘪𝘦𝘯𝘵𝘦 𝘺 𝘦𝘭𝘪𝘮𝘪𝘯𝘢𝘳 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘲𝘶𝘦 𝘯𝘰 𝘦𝘴 𝘭𝘢 𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘢 𝘱𝘢𝘳𝘢 𝘲𝘶𝘦 𝘦𝘯 𝘤𝘢𝘴𝘰 𝘥𝘦 𝘷𝘰𝘭𝘷𝘦𝘳 𝘢 𝘱𝘰𝘯𝘦𝘳𝘴𝘦 𝘯𝘰 𝘱𝘦𝘳𝘥𝘦𝘳 𝘶𝘯 𝘪𝘯𝘵𝘦𝘯𝘵𝘰.
+1. **El primer apartado se encarga de buscar la palabra con mayor frecuencia y filtrar las palabras corrompiendo si las letras de la palabra ingresada por un jugador están en la posición correcta o incorrecta y ponerle el color correspondiente y eliminar la palabra que no es la correcta para que en caso de volver a ponerse no perder un intento.**
 
-𝘌𝘭 𝘴𝘦𝘨𝘶𝘯𝘥𝘰 𝘢𝘱𝘢𝘳𝘵𝘢𝘥𝘰 𝘴𝘦 𝘦𝘯𝘤𝘢𝘳𝘨𝘢 𝘥𝘦 𝘴𝘰𝘭𝘪𝘤𝘪𝘵𝘢𝘳𝘭𝘦 𝘢𝘭 𝘫𝘶𝘨𝘢𝘥𝘰𝘳 𝘶𝘯𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘺 𝘲𝘶𝘪𝘵𝘢𝘳𝘭𝘦 𝘶𝘯 𝘪𝘯𝘵𝘦𝘯𝘵𝘰 𝘴𝘪 𝘯𝘰 𝘴𝘦 𝘢𝘥𝘪𝘷𝘪𝘯𝘢 𝘦𝘯 𝘦𝘴𝘦 𝘪𝘯𝘵𝘦𝘯𝘵𝘰, 𝘪𝘮𝘱𝘳𝘪𝘮𝘪𝘦𝘯𝘥𝘰 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘤𝘰𝘯 𝘦𝘭 𝘤𝘰𝘭𝘰𝘳 𝘤𝘰𝘳𝘳𝘦𝘴𝘱𝘰𝘯𝘥𝘪𝘦𝘯𝘵𝘦 𝘦𝘯 𝘤𝘢𝘥𝘢 𝘭𝘦𝘵𝘳𝘢.
+2. **El segundo apartado se encarga de solicitarle al jugador una palabra y quitarle un intento si no se adivina en ese intento, imprimiendo la palabra con el color correspondiente en cada letra.**
 
-𝘔𝘪𝘦𝘯𝘵𝘳𝘢𝘴 𝘲𝘶𝘦 𝘭𝘢 𝘧𝘶𝘯𝘤𝘪𝘰𝘯𝘢𝘭𝘪𝘥𝘢𝘥 𝘥𝘦 𝘭𝘰𝘴 ú𝘭𝘵𝘪𝘮𝘰𝘴 𝘱𝘶𝘯𝘵𝘰𝘴 𝘦𝘴 𝘭𝘢 𝘥𝘦 𝘤𝘢𝘳𝘨𝘢𝘳 𝘭𝘢 𝘣𝘢𝘴𝘦 𝘥𝘦 𝘥𝘢𝘵𝘰𝘴 𝘥𝘰𝘯𝘥𝘦 𝘴𝘦 𝘦𝘯𝘤𝘶𝘦𝘯𝘵𝘳𝘢𝘯 𝘭𝘢𝘴 𝘱𝘢𝘭𝘢𝘣𝘳𝘢𝘴 𝘺 𝘦𝘭𝘦𝘨𝘪𝘳 𝘭𝘢 𝘱𝘢𝘭𝘢𝘣𝘳𝘢 𝘴𝘦𝘤𝘳𝘦𝘵𝘢 𝘢 𝘢𝘥𝘪𝘷𝘪𝘯𝘢𝘳, 𝘺 𝘭𝘢 𝘥𝘦 𝘮𝘰𝘴𝘵𝘳𝘢𝘳 𝘭𝘢𝘴 𝘭𝘦𝘵𝘳𝘢𝘴 𝘲𝘶𝘦 𝘴𝘦 𝘧𝘶𝘦𝘳𝘰𝘯 𝘶𝘴𝘢𝘯𝘥𝘰 𝘤𝘰𝘯 𝘴𝘶 𝘤𝘰𝘭𝘰𝘳 𝘳𝘦𝘴𝘱𝘦𝘤𝘵𝘪𝘷𝘰 (𝘨𝘳𝘪𝘴, 𝘢𝘮𝘢𝘳𝘪𝘭𝘭𝘰 𝘰 𝘷𝘦𝘳𝘥𝘦).
+**Mientras que la funcionalidad de los últimos puntos es la de cargar la base de datos donde se encuentran las palabras y elegir la palabra secreta a adivinar, y la de mostrar las letras que se fueron usando con su color respectivo (gris, amarillo o verde).**
+
 
 ## ¿Cómo se ejcuta?
 𝘗𝘢𝘳𝘢 𝘦𝘫𝘦𝘤𝘶𝘵𝘢𝘳 𝘦𝘭 𝘤ó𝘥𝘪𝘨𝘰 𝘦𝘴 𝘯𝘦𝘤𝘦𝘴𝘢𝘳𝘪𝘰 𝘲𝘶𝘦 𝘦𝘭 𝘢𝘳𝘤𝘩𝘪𝘷𝘰 𝘫𝘶𝘨𝘢𝘣𝘭𝘦.𝘤 𝘵𝘦𝘯𝘨𝘢 𝘭𝘰𝘴 𝘢𝘳𝘤𝘩𝘪𝘷𝘰𝘴 𝘦𝘥.𝘤 𝘺 𝘫𝘶𝘨𝘢𝘥𝘰𝘳.𝘤, 𝘦𝘭 𝘤𝘶𝘢𝘭 𝘥𝘦𝘣𝘦 𝘵𝘦𝘯𝘦𝘳 𝘭𝘰𝘴 𝘢𝘳𝘤𝘩𝘪𝘷𝘰𝘴 𝘫𝘶𝘨𝘢𝘥𝘰𝘳.𝘩 𝘺 𝘦𝘥2.𝘤, 𝘵𝘦𝘯𝘪𝘦𝘯𝘥𝘰 𝘭𝘰𝘴 𝘢𝘳𝘤𝘩𝘪𝘷𝘰𝘴 𝘦𝘥.𝘤 𝘺 𝘦𝘥2.𝘤 𝘴𝘶𝘴 𝘢𝘳𝘤𝘩𝘪𝘷𝘰𝘴 𝘮𝘢𝘪𝘯.𝘤 𝘺 𝘦𝘥.𝘩 (𝘦𝘥.𝘩 𝘦𝘯 𝘤𝘢𝘴𝘰 𝘥𝘦𝘭 𝘦𝘥.𝘤 𝘺 𝘦𝘥2.𝘩 𝘦𝘯 𝘦𝘭 𝘤𝘢𝘴𝘰 𝘥𝘦𝘭 𝘦𝘥2.𝘤).
