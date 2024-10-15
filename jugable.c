@@ -16,7 +16,7 @@ void jugarWordle(char* palabraSecreta) {
 
     for (int i = 0; i < intentos && !adivinada; i++){
     do {
-        printf("Intento %d: Ingresa una palabra de 5 letras: ", i + 1);
+        printf("Ingresa una palabra de 5 letras (%d intentos restantes): ", 6 - i);
         scanf("%5s", intento);  // Limita la entrada a 5 caracteres
 
         if (strlen(intento) != 5) {
@@ -53,3 +53,4 @@ void jugarWordle(char* palabraSecreta) {
 
     free(intento);
 }
+
