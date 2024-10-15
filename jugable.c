@@ -59,6 +59,20 @@ void jugarWordle(char* palabraSecreta) {
 
     liberar_memoria(intento);
 }
+// Función para recomendar una palabra de la base de datos
+char* recomendarPalabra(char intentosPrevios[][6], int numIntentos) {
+    for (int i = 0; i < numPalabrasBase; i++) {
+        int yaIntentada = 0;
+        for (int j = 0; j < numIntentos; j++) {
+            yaIntentada = yaIntentada || (strcmp(baseDeDatos[i], intentosPrevios[j]) == 0);
+        }
+        // Si la palabra no fue intentada, la sugiere
+        if (!yaIntentada) {
+            return (char*)baseDeDatos[i];
+        }
+    }
+    return "No quedan palabras por sugerir";  // Si todas las palabras fueron intentadas
+}
 
 void liberar_memoria(char* palabra) {
     free(palabra);
