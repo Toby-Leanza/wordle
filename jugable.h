@@ -9,6 +9,4 @@
 // Función que permite jugar al juego interactivamente
 void jugarWordle(char* palabraSecreta);
 
-void liberar_memoria(char* palabra);
-
 #endif
