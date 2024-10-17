@@ -7,6 +7,6 @@
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
 // Función que permite jugar al juego interactivamente
-void jugarWordle(char* palabraSecreta);
+void jugarWordle(char* palabraSecreta, char palabras[][6], int frecuencias[], int* numPalabras);
 
 #endif
